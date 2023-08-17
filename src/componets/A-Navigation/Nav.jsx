@@ -1,4 +1,4 @@
-import { Grid, TextField } from "@mui/material";
+import { Button, Grid, TextField } from "@mui/material";
 import React from "react";
 
 const Nav = () => {
@@ -8,10 +8,13 @@ const Nav = () => {
         <h1>My_sales APP</h1>
       </Grid>
       <Grid item xs={6}>
-        <TextField variant="outlined" label="Searce Here..." />
+        <TextField variant="outlined" fullWidth label="Searce Here..." />
       </Grid>
       <Grid item xs={2}>
-        <h1>CARt</h1>{" "}
+        <Button>Search....</Button>
+      </Grid>
+      <Grid item xs={2}>
+        <h1>CART-0</h1>{" "}
       </Grid>
     </Grid>
   );
