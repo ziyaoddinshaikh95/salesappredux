@@ -2,7 +2,7 @@ import { Badge, Button, Card, CardContent, Grid, Rating } from "@mui/material";
 import React from "react";
 import { useDispatch } from "react-redux";
 
-const ProductItem = ({ item }) => {
+const ProductItem = ({ item, index }) => {
   const dispatch = useDispatch();
   console.log("item", item);
   const addtocat = (item) => {
@@ -12,6 +12,14 @@ const ProductItem = ({ item }) => {
     const action = { type, payload };
     dispatch(action);
   };
+  const handleDelete = (item) => {
+    console.log("deleteitem", item);
+    const type = "REMOVE";
+    const payload = item;
+    const action = { type, payload };
+    dispatch(action);
+  };
+
   return (
     <Grid item xs={3} textAlign={"center"}>
       <Card>
@@ -29,7 +37,9 @@ const ProductItem = ({ item }) => {
           >
             ADD-To-CART
           </Button>
-          <Button variant="contained">BUY</Button>
+          <Button variant="contained" onClick={() => handleDelete(item)}>
+            REMOVE
+          </Button>
         </CardContent>
       </Card>
     </Grid>

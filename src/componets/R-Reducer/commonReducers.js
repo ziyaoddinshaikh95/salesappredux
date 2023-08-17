@@ -8,5 +8,10 @@ export const commonReducers = (state = { product: [], cart: [] }, action) => {
       cart: [...state.cart, action.payload],
     };
   }
+  if (action.type == "REMOVE") {
+    const filtered = state.cart.filter((item) => item !== action.payload);
+    return { ...state, cart: filtered };
+  }
+
   return state;
 };
