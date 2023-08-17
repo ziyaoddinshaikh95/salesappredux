@@ -1,8 +1,12 @@
-import { Button, Grid, TextField } from "@mui/material";
+import { Badge, Button, Grid, TextField } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useSelector } from "react-redux";
 
 const Nav = () => {
+  const selectdata = useSelector((state) => state.commonReducers.cart.length);
+  console.log("length", selectdata);
   return (
     <Grid container spacing={3}>
       <Grid item xs={2}>
@@ -18,7 +22,10 @@ const Nav = () => {
       </Grid>
       <Grid item xs={2}>
         <Link to="card">
-          <Button variant="contained"> showcard</Button>
+          <Badge badgeContent={2} color="success">
+            <ShoppingCartIcon />
+          </Badge>
+          {/* <Button variant="contained"> showcard</Button> */}
         </Link>
       </Grid>
     </Grid>
