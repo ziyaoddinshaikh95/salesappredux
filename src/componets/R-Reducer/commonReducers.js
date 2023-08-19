@@ -1,4 +1,7 @@
-export const commonReducers = (state = { product: [], cart: [] }, action) => {
+export const commonReducers = (
+  state = { product: [], cart: [], todo: [] },
+  action
+) => {
   if (action.type === "ADD-PRODUCT") {
     return { ...state, product: [...state.product, action.payload] };
   }
