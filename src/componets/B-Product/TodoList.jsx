@@ -1,6 +1,7 @@
 import { Button, Grid, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { TodoItem } from "./TodoItem";
 
 export const TodoList = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ export const TodoList = () => {
     const action = { type, payload };
     dispatch(action);
     console.log(data);
+    setData("");
   };
   return (
     <Grid container spacing={3}>
@@ -81,6 +83,7 @@ export const TodoList = () => {
           Submit
         </Button>
       </Grid>
+      <TodoItem />
     </Grid>
   );
 };
