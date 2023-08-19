@@ -7,8 +7,10 @@ export const TodoList = () => {
   const [data, setData] = useState({});
 
   const handleSubmit = () => {
-    // const type="ADD_TODO"
-    // const payload=
+    const type = "ADD_TODO";
+    const payload = data;
+    const action = { type, payload };
+    dispatch(action);
     console.log(data);
   };
   return (

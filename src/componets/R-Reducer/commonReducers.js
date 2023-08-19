@@ -15,6 +15,20 @@ export const commonReducers = (
     const filtered = state.cart.filter((item) => item !== action.payload);
     return { ...state, cart: filtered };
   }
-
+  // if (action.type == "ADD_TODO") {
+  //   return {
+  //     ...state,
+  //     todo: [...state.todo, action.payload],
+  //   };
+  // }
   return state;
 };
+
+// switch(action.type){
+//   case "ADD_TODO":
+//     return {
+//       ...state,
+//       todo: [...state.todo, action.payload],
+//     };
+
+// }
