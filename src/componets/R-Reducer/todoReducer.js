@@ -5,6 +5,12 @@ export const todoReducer = (state = { todo: [] }, action) => {
         ...state,
         todo: [...state.todo, action.payload],
       };
+    case "remove":
+      const filtered = state.todo.filter((item, ind) => ind !== action.payload);
+      return {
+        ...state,
+        todo: filtered,
+      };
   }
   return state;
 };

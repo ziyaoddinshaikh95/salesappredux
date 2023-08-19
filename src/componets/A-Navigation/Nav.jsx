@@ -18,7 +18,7 @@ const Nav = () => {
       <Grid item xs={2}>
         <h1>My_sales app</h1>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <TextField variant="outlined" fullWidth label="Searce Here..." />
       </Grid>
 
@@ -40,6 +40,13 @@ const Nav = () => {
         >
           <ReplyIcon />
         </Button>
+      </Grid>
+      <Grid item xs={2}>
+        <Link to="todo">
+          <Button fullWidth sx={{ height: 55 }} variant="contained">
+            Todo
+          </Button>
+        </Link>
       </Grid>
     </Grid>
   );
