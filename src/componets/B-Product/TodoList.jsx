@@ -12,8 +12,6 @@ export const TodoList = () => {
     const payload = data;
     const action = { type, payload };
     dispatch(action);
-    console.log(data);
-    setData("");
   };
   return (
     <Grid container spacing={3}>
