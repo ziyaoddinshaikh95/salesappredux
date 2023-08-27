@@ -5,6 +5,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCart";
 import { useSelector } from "react-redux";
 import ReplyIcon from "@mui/icons-material/Reply";
 import { useNavigate } from "react-router-dom";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -15,8 +16,12 @@ const Nav = () => {
   };
   return (
     <Grid container spacing={3}>
-      <Grid item xs={2}>
-        <h1>My_sales app</h1>
+      <Grid item xs={1}>
+        <Link to="login">
+          <Button fullWidth sx={{ height: 55 }} variant="contained">
+            <AccountCircleIcon />
+          </Button>
+        </Link>
       </Grid>
       <Grid item xs={4}>
         <TextField variant="outlined" fullWidth label="Searce Here..." />

@@ -1,5 +1,5 @@
 export const commonReducers = (
-  state = { product: [], cart: [], todo: [] },
+  state = { product: [], cart: [], todo: [], user: {} },
   action
 ) => {
   if (action.type === "ADD-PRODUCT") {
@@ -15,6 +15,13 @@ export const commonReducers = (
     const filtered = state.cart.filter((item) => item !== action.payload);
     return { ...state, cart: filtered };
   }
+  if (action.type == "SIGN-UP") {
+    return {
+      ...state,
+      user: action.payload,
+    };
+  }
+
   // if (action.type == "ADD_TODO") {
   //   return {
   //     ...state,
