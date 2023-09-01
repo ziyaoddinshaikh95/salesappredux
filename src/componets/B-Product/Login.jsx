@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import valid from "./valid";
 
 export const Login = () => {
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(" ");
   const [error, seterror] = useState({});
   const navigate = useNavigate();
   const select = useSelector((state) => state.commonReducers.user);
