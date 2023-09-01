@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import valid from "./valid";
 
 export const Login = () => {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, seterror] = useState({});
   const navigate = useNavigate();
